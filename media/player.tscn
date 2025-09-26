@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwa4kkfbtj8ht"]
+
+[ext_resource type="Texture2D" uid="uid://6gp5y3dkaocm" path="res://media/assets/spritesheet-characters-default.png" id="1_iohoi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rn20"]
+radius = 7.0
+height = 22.0
+
+[node name="player" type="CharacterBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="animation" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="animation"]
+root_node = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="animation"]
+position = Vector2(0, -10)
+scale = Vector2(0.223684, 0.223684)
+texture = ExtResource("1_iohoi")
+region_enabled = true
+region_rect = Rect2(537.999, 30.6663, 76.6667, 104.667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("CapsuleShape2D_0rn20")
