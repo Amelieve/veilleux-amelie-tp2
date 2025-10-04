@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cd62qni4x7abq"]
+[gd_scene load_steps=9 format=3 uid="uid://cd62qni4x7abq"]
 
 [ext_resource type="Texture2D" uid="uid://b6ovwhn1r6p0k" path="res://media/assets/tiles_1.png" id="1_bb12l"]
 [ext_resource type="Texture2D" uid="uid://vj8oyenhniy8" path="res://media/assets/spritesheet-backgrounds-default.png" id="1_fy505"]
 [ext_resource type="PackedScene" uid="uid://dwa4kkfbtj8ht" path="res://media/player.tscn" id="2_qpjuv"]
 [ext_resource type="Texture2D" uid="uid://f6x6ijbrbgb3" path="res://media/assets/spritesheet-tiles-default.png" id="4_ak2r3"]
 [ext_resource type="Texture2D" uid="uid://dbme4b0f6a4k4" path="res://media/assets/spritesheet-enemies-default.png" id="5_ttqk7"]
+[ext_resource type="PackedScene" uid="uid://fv4edkwwfubs" path="res://pickup.tscn" id="6_ttqk7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpjuv"]
 texture = ExtResource("1_bb12l")
@@ -366,3 +367,9 @@ scale = Vector2(0.275, 0.275)
 texture = ExtResource("5_ttqk7")
 region_enabled = true
 region_rect = Rect2(446.26, 128.687, 64.6132, 60.1053)
+
+[node name="Coin" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coin" instance=ExtResource("6_ttqk7")]
+position = Vector2(-9, -54)
+scale = Vector2(0.273371, 0.262032)

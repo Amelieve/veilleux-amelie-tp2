@@ -5,6 +5,49 @@
 [ext_resource type="Script" uid="uid://cifg15vyjqnpw" path="res://media/scripts/player_aniamator.gd" id="2_7q2k6"]
 [ext_resource type="Script" uid="uid://b5bspty8i45rt" path="res://media/scripts/camera_2d.gd" id="2_sifpp"]
 
+[sub_resource type="Animation" id="Animation_7q2k6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("playeranimateur/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(537.999, 30.6663, 76.6667, 104.667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("playeranimateur/Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.223684, 0.223684)]
+}
+
+[sub_resource type="Animation" id="Animation_5cmdj"]
+resource_name = "fall"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("playeranimateur/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(529.6, 169.35, 93.5, 91.3)]
+}
+
 [sub_resource type="Animation" id="Animation_0rn20"]
 resource_name = "idle"
 length = 2.0
@@ -34,49 +77,6 @@ tracks/1/keys = {
 "values": [Vector2(0.223684, 0.223684), Vector2(0.223684, 0.217611), Vector2(0.223684, 0.223684)]
 }
 
-[sub_resource type="Animation" id="Animation_7q2k6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("playeranimateur/Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Rect2(537.999, 30.6663, 76.6667, 104.667)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("playeranimateur/Sprite2D:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.223684, 0.223684)]
-}
-
-[sub_resource type="Animation" id="Animation_sifpp"]
-resource_name = "move"
-step = 0.25
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("playeranimateur/Sprite2D:region_rect")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Rect2(537.999, 30.6663, 76.6667, 104.667), Rect2(399.7, 544, 93.5, 100.1), Rect2(403.1, 409.15, 91.3, 111.1), Rect2(399.7, 544, 93.5, 100.1), Rect2(403.1, 409.15, 91.3, 111.1)]
-}
-
 [sub_resource type="Animation" id="Animation_74l6v"]
 resource_name = "jump"
 step = 0.25
@@ -93,20 +93,20 @@ tracks/0/keys = {
 "values": [Rect2(402, 666.55, 89.1, 107.8)]
 }
 
-[sub_resource type="Animation" id="Animation_5cmdj"]
-resource_name = "fall"
+[sub_resource type="Animation" id="Animation_sifpp"]
+resource_name = "move"
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("playeranimateur/Sprite2D:region_rect")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Rect2(529.6, 169.35, 93.5, 91.3)]
+"values": [Rect2(537.999, 30.6663, 76.6667, 104.667), Rect2(399.7, 544, 93.5, 100.1), Rect2(403.1, 409.15, 91.3, 111.1), Rect2(399.7, 544, 93.5, 100.1), Rect2(403.1, 409.15, 91.3, 111.1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sifpp"]
