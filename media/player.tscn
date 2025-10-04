@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwa4kkfbtj8ht"]
+[gd_scene load_steps=12 format=3 uid="uid://dwa4kkfbtj8ht"]
 
 [ext_resource type="Script" uid="uid://cofbi4f4rxr7t" path="res://media/scripts/player_controller.gd" id="1_0rn20"]
 [ext_resource type="Texture2D" uid="uid://6gp5y3dkaocm" path="res://media/assets/spritesheet-characters-default.png" id="1_iohoi"]
 [ext_resource type="Script" uid="uid://cifg15vyjqnpw" path="res://media/scripts/player_aniamator.gd" id="2_7q2k6"]
+[ext_resource type="Script" uid="uid://b5bspty8i45rt" path="res://media/scripts/camera_2d.gd" id="2_sifpp"]
 
 [sub_resource type="Animation" id="Animation_0rn20"]
 resource_name = "idle"
@@ -128,7 +129,8 @@ jump_power = 8.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -15)
-zoom = Vector2(6, 6)
+zoom = Vector2(3, 3)
+script = ExtResource("2_sifpp")
 
 [node name="playeranimateur" type="Node2D" parent="." node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
 script = ExtResource("2_7q2k6")
