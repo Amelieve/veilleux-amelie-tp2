@@ -4,7 +4,7 @@ extends Camera2D
 
 func _ready():
 	
-	var tilemap = get_tree().get_current_scene().get_node("TileMap")
+	var tilemap = get_tree().get_current_scene().get_node("Area/TileMap")
 	if tilemap:
 		var used_rect = tilemap.get_used_rect()
 		var cell_size = tilemap.tile_set.tile_size
