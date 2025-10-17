@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*res://media/scripts/game_manager.gd"
+Gamemanager="*res://media/scripts/gamemanager.gd"
 
 [input]
 
@@ -39,7 +39,7 @@ move_right={
 
 [layer_names]
 
-2d_physics/layer_17="Transition"
+2d_physics/layer_17="Transitions"
 
 [rendering]
 

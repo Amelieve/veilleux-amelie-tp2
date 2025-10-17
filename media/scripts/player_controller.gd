@@ -1,10 +1,10 @@
 extends CharacterBody2D
 class_name PlayerController
 
-@export var speed = 10.0
+@export var speed = 17.0
 @export var jump_power= 10.0
 
-var speed_multiplier= 30.0
+var speed_multiplier= 10.0
 var jump_multiplier = -30.0
 var direction = 0
 

@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cd62qni4x7abq"]
+[gd_scene load_steps=10 format=3 uid="uid://cd62qni4x7abq"]
 
 [ext_resource type="Texture2D" uid="uid://b6ovwhn1r6p0k" path="res://media/assets/tiles_1.png" id="1_bb12l"]
 [ext_resource type="Texture2D" uid="uid://vj8oyenhniy8" path="res://media/assets/spritesheet-backgrounds-default.png" id="1_fy505"]
 [ext_resource type="PackedScene" uid="uid://dwa4kkfbtj8ht" path="res://media/player.tscn" id="2_qpjuv"]
 [ext_resource type="Texture2D" uid="uid://f6x6ijbrbgb3" path="res://media/assets/spritesheet-tiles-default.png" id="4_ak2r3"]
 [ext_resource type="PackedScene" uid="uid://b52wnbfoy8eku" path="res://worm.tscn" id="7_ilba2"]
+[ext_resource type="PackedScene" uid="uid://83fi6bkp04b2" path="res://coin.tscn" id="7_pax0r"]
+[ext_resource type="PackedScene" uid="uid://b5kt2uhece0sa" path="res://area_exit.tscn" id="8_b0qxs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilba2"]
 texture = ExtResource("1_bb12l")
@@ -363,3 +365,24 @@ region_enabled = true
 region_rect = Rect2(277, 472, 192, 120)
 
 [node name="player" parent="." instance=ExtResource("2_qpjuv")]
+
+[node name="AreaExit" parent="." instance=ExtResource("8_b0qxs")]
+position = Vector2(542, -30)
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("7_pax0r")]
+position = Vector2(-12, -54)
+scale = Vector2(0.0667238, 0.0871976)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("7_pax0r")]
+position = Vector2(218, -38)
+scale = Vector2(0.0667238, 0.0871976)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("7_pax0r")]
+position = Vector2(376, -86)
+scale = Vector2(0.0667238, 0.0871976)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("7_pax0r")]
+position = Vector2(308, 90)
+scale = Vector2(0.0667238, 0.0871976)

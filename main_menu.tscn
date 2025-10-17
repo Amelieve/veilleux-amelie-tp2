@@ -34,9 +34,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -162.5
-offset_top = -67.5
+offset_top = 54.5
 offset_right = 162.5
-offset_bottom = 67.5
+offset_bottom = 189.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
@@ -61,6 +61,12 @@ theme_override_colors/font_color = Color(0.4, 0.588235, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 text = "Exit"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Aide ce petit alien à récupérer 4 pièces pour que celui-ci 
+                          puisse retourner chez lui !!"
+visible_ratio = -0.00877193
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
