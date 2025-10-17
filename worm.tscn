@@ -87,4 +87,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_jxdlp")
 }
 
+[node name="Label" type="Label" parent="."]
+offset_left = -37.0
+offset_top = -43.0
+offset_right = 13.0
+offset_bottom = -20.0
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

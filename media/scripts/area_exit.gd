@@ -10,11 +10,11 @@ func _ready():
 
 func open():
 	is_open = true
-	sprite.regin_rect.position.x = 21
+	sprite.region_rect.position.x = 21
 
 func close():
 	is_open = false
-	sprite.regin_rect.position.x = -1
+	sprite.region_rect.position.x = -1
 
 func _on_body_entered(body: Node2D) -> void:
 	if is_open && body is PlayerController:

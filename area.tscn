@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cd62qni4x7abq"]
+[gd_scene load_steps=11 format=3 uid="uid://cd62qni4x7abq"]
 
 [ext_resource type="Texture2D" uid="uid://b6ovwhn1r6p0k" path="res://media/assets/tiles_1.png" id="1_bb12l"]
 [ext_resource type="Texture2D" uid="uid://vj8oyenhniy8" path="res://media/assets/spritesheet-backgrounds-default.png" id="1_fy505"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b52wnbfoy8eku" path="res://worm.tscn" id="7_ilba2"]
 [ext_resource type="PackedScene" uid="uid://83fi6bkp04b2" path="res://coin.tscn" id="7_pax0r"]
 [ext_resource type="PackedScene" uid="uid://b5kt2uhece0sa" path="res://area_exit.tscn" id="8_b0qxs"]
+[ext_resource type="AudioStream" uid="uid://dibngjnlyaaar" path="res://media/son/nature.mp3" id="8_pax0r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilba2"]
 texture = ExtResource("1_bb12l")
@@ -330,6 +331,13 @@ sources/0 = SubResource("TileSetAtlasSource_ilba2")
 
 [node name="AreaTemplate" type="Node2D"]
 
+[node name="ciel" type="Sprite2D" parent="."]
+position = Vector2(265, -35)
+scale = Vector2(4.98668, 4.23839)
+texture = ExtResource("1_fy505")
+region_enabled = true
+region_rect = Rect2(277, 472, 192, 120)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_fy505")
 format = 2
@@ -356,17 +364,10 @@ region_rect = Rect2(961.271, 844.226, 62.131, 51.4788)
 position = Vector2(336, -2)
 scale = Vector2(0.202848, 0.212709)
 
-[node name="ciel" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(265, -35)
-scale = Vector2(4.98668, 4.23839)
-texture = ExtResource("1_fy505")
-region_enabled = true
-region_rect = Rect2(277, 472, 192, 120)
-
 [node name="player" parent="." instance=ExtResource("2_qpjuv")]
 
 [node name="AreaExit" parent="." instance=ExtResource("8_b0qxs")]
+visible = false
 position = Vector2(542, -30)
 
 [node name="Coins" type="Node2D" parent="."]
@@ -386,3 +387,8 @@ scale = Vector2(0.0667238, 0.0871976)
 [node name="Coin4" parent="Coins" instance=ExtResource("7_pax0r")]
 position = Vector2(308, 90)
 scale = Vector2(0.0667238, 0.0871976)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pax0r")
+volume_db = 0.405
+autoplay = true

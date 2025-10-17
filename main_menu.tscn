@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cf5b0nnqldmkd"]
+[gd_scene load_steps=5 format=3 uid="uid://cf5b0nnqldmkd"]
 
 [ext_resource type="Script" uid="uid://ia07yap7fgux" path="res://media/scripts/main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://vj8oyenhniy8" path="res://media/assets/spritesheet-backgrounds-default.png" id="2_7vrkn"]
+[ext_resource type="AudioStream" uid="uid://cyxkyo0ovl1s3" path="res://media/son/menu.mp3" id="3_fu7sn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)
@@ -66,7 +67,13 @@ text = "Exit"
 layout_mode = 2
 text = "Aide ce petit alien à récupérer 4 pièces pour que celui-ci 
                           puisse retourner chez lui !!"
-visible_ratio = -0.00877193
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fu7sn")
+volume_db = -1.79
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
