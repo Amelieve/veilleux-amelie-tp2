@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cd62qni4x7abq"]
+[gd_scene load_steps=10 format=3 uid="uid://cd62qni4x7abq"]
 
 [ext_resource type="Texture2D" uid="uid://b6ovwhn1r6p0k" path="res://media/assets/tiles_1.png" id="1_bb12l"]
 [ext_resource type="Texture2D" uid="uid://vj8oyenhniy8" path="res://media/assets/spritesheet-backgrounds-default.png" id="1_fy505"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://f6x6ijbrbgb3" path="res://media/assets/spritesheet-tiles-default.png" id="4_ak2r3"]
 [ext_resource type="PackedScene" uid="uid://b52wnbfoy8eku" path="res://worm.tscn" id="7_ilba2"]
 [ext_resource type="PackedScene" uid="uid://83fi6bkp04b2" path="res://coin.tscn" id="7_pax0r"]
-[ext_resource type="PackedScene" uid="uid://b5kt2uhece0sa" path="res://area_exit.tscn" id="8_b0qxs"]
 [ext_resource type="AudioStream" uid="uid://dibngjnlyaaar" path="res://media/son/nature.mp3" id="8_pax0r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilba2"]
@@ -365,10 +364,6 @@ position = Vector2(336, -2)
 scale = Vector2(0.202848, 0.212709)
 
 [node name="player" parent="." instance=ExtResource("2_qpjuv")]
-
-[node name="AreaExit" parent="." instance=ExtResource("8_b0qxs")]
-visible = false
-position = Vector2(542, -30)
 
 [node name="Coins" type="Node2D" parent="."]
 
