@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cd62qni4x7abq"]
+[gd_scene load_steps=8 format=3 uid="uid://cd62qni4x7abq"]
 
 [ext_resource type="Texture2D" uid="uid://b6ovwhn1r6p0k" path="res://media/assets/tiles_1.png" id="1_bb12l"]
 [ext_resource type="Texture2D" uid="uid://vj8oyenhniy8" path="res://media/assets/spritesheet-backgrounds-default.png" id="1_fy505"]
 [ext_resource type="PackedScene" uid="uid://dwa4kkfbtj8ht" path="res://media/player.tscn" id="2_qpjuv"]
 [ext_resource type="Texture2D" uid="uid://f6x6ijbrbgb3" path="res://media/assets/spritesheet-tiles-default.png" id="4_ak2r3"]
-[ext_resource type="PackedScene" uid="uid://fv4edkwwfubs" path="res://pickup.tscn" id="6_ttqk7"]
 [ext_resource type="PackedScene" uid="uid://b52wnbfoy8eku" path="res://worm.tscn" id="7_ilba2"]
-[ext_resource type="PackedScene" uid="uid://byguky8gp010u" path="res://area_exit.tscn" id="8_b0qxs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilba2"]
 texture = ExtResource("1_bb12l")
@@ -328,7 +326,7 @@ terrain_set_0/terrain_1/name = "ground 1"
 terrain_set_0/terrain_1/color = Color(0.1989, 0.142774, 0.415404, 1)
 sources/0 = SubResource("TileSetAtlasSource_ilba2")
 
-[node name="Area" type="Node2D"]
+[node name="AreaTemplate" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_fy505")
@@ -352,30 +350,9 @@ texture = ExtResource("4_ak2r3")
 region_enabled = true
 region_rect = Rect2(961.271, 844.226, 62.131, 51.4788)
 
-[node name="Coin" type="Node2D" parent="."]
-
-[node name="Coin" parent="Coin" instance=ExtResource("6_ttqk7")]
-position = Vector2(-9, -54)
-scale = Vector2(0.273371, 0.262032)
-
-[node name="Coin2" parent="Coin" instance=ExtResource("6_ttqk7")]
-position = Vector2(344, -86)
-scale = Vector2(0.273371, 0.262032)
-
-[node name="Coin3" parent="Coin" instance=ExtResource("6_ttqk7")]
-position = Vector2(311, 90)
-scale = Vector2(0.273371, 0.262032)
-
-[node name="Coin4" parent="Coin" instance=ExtResource("6_ttqk7")]
-position = Vector2(219, -38)
-scale = Vector2(0.265294, 0.268666)
-
 [node name="Area2D" parent="." instance=ExtResource("7_ilba2")]
 position = Vector2(336, -2)
 scale = Vector2(0.202848, 0.212709)
-
-[node name="AreaExit" parent="." instance=ExtResource("8_b0qxs")]
-position = Vector2(559, -16)
 
 [node name="ciel" type="Sprite2D" parent="."]
 visible = false
