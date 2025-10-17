@@ -14,7 +14,7 @@ func show_floating_text(msg: String) -> void:
 	label.position = Vector2(0, -30)
 	add_child(label)
 
-	# Animation : le texte monte et disparaît
+	
 	var tween = get_tree().create_tween()
 	tween.tween_property(label, "position", label.position + Vector2(0, -40), 1.0)
 	tween.tween_property(label, "modulate:a", 0.0, 1.0)

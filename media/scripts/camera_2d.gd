@@ -3,7 +3,7 @@ extends Camera2D
 
 
 func _ready():
-	# Cherche un TileMap dans la scène principale (le niveau)
+	
 	var tilemap = get_tree().get_current_scene().get_node("TileMap")
 	if tilemap:
 		var used_rect = tilemap.get_used_rect()
