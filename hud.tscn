@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctjcmugbtv8yq"]
+
+[ext_resource type="Texture2D" uid="uid://b3ovd7x0muvts" path="res://media/assets/coin_icon.png" id="1_37p78"]
+[ext_resource type="Script" uid="uid://doq48kmtc4k6q" path="res://media/scripts/hud.gd" id="1_64ctp"]
+
+[node name="HUD" type="Control" node_paths=PackedStringArray("coin_label", "portal_label") groups=["hud"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64ctp")
+coin_label = NodePath("CoinTexture/CoinLabel")
+portal_label = NodePath("PortalLabel")
+
+[node name="CoinTexture" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = -8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 72.0
+texture = ExtResource("1_37p78")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CoinLabel" type="Label" parent="CoinTexture"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 23.0
+offset_right = 95.0
+offset_bottom = 46.0
+text = "x 00"
+
+[node name="PortalLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+text = "Portail Fermé.."

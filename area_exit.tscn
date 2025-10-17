@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_58kaw"]
 radius = 22.0227
 
-[node name="AreaExit" type="Area2D"]
+[node name="AreaExit" type="Area2D" node_paths=PackedStringArray("sprite") groups=["area_exits"]]
 script = ExtResource("1_58kaw")
+sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10
@@ -15,7 +16,7 @@ position = Vector2(-6.90511, -4.54687)
 scale = Vector2(1.84714, 1.8679)
 texture = ExtResource("1_20lp5")
 region_enabled = true
-region_rect = Rect2(19.2006, 0, 24.7994, 22)
+region_rect = Rect2(-2, 0, 24, 22)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, -5)
