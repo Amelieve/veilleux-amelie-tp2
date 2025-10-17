@@ -16,5 +16,5 @@ visible = false
 [node name="Area2D" parent="." index="4"]
 visible = false
 
-[node name="Coins" parent="." index="7"]
+[node name="Coins" parent="." index="6"]
 visible = false
